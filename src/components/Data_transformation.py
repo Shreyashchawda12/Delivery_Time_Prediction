@@ -6,12 +6,12 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OrdinalEncoder,StandardScaler
+from sklearn.preprocessing import OneHotEncoder,StandardScaler
 
 from src.exception import CustomException
 from src.logger import logging
 import os
-from src.utils import save_object
+from src.components.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -21,12 +21,12 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
         
-    def get_data_transformation_object():
+    def get_data_transformation_object(self):
         try:
             logging.info('Data Transformation started')
             # Define which columns should be ordinal-encoded and which should be scaled
-            categorical_cols = x.select_dtypes(include='object').columns
-            numerical_cols = x.select_dtypes(exclude='object').columns
+            categorical_cols = ['Weather_conditions', 'Road_traffic_density','Festival', 'City']
+            numerical_cols = ['Delivery_person_Age', 'Delivery_person_Ratings','Restaurant_latitude', 'Restaurant_longitude','Delivery_location_latitude', 'Delivery_location_longitude','Vehicle_condition', 'multiple_deliveries', 'Time_order_hour','Time_order_min', 'Time_order_picked_hour', 'Time_order_picked_min']
             logging.info('pipeline initiated')
             ## Numerical Pipeline
             num_pipeline=Pipeline(
@@ -65,14 +65,15 @@ class DataTransformation:
             logging.info('Obtaining preprocessing object')
             preprocessing_obj = self.get_data_transformation_object()
             
-            Target_column_name = df[["Time_taken (min)"]]
-            drop_column = df.drop(labels=["Time_taken (min)"],axis=1)
+            Target_column_name = "Time_taken (min)"
+            column_del = 'Unnamed: 0'
+            drop_column = [Target_column_name,column_del]
             
-            input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
-            target_feature_train_df=train_df[target_column_name]
+            input_feature_train_df = train_df.drop(columns=drop_column,axis=1)
+            target_feature_train_df=train_df[Target_column_name]
 
-            input_feature_test_df=test_df.drop(columns=drop_columns,axis=1)
-            target_feature_test_df=test_df[target_column_name]
+            input_feature_test_df=test_df.drop(columns=drop_column,axis=1)
+            target_feature_test_df=test_df[Target_column_name]
             
             ## Trnasformating using preprocessor obj
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
@@ -107,6 +108,5 @@ class DataTransformation:
         
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
-
             raise CustomException(e,sys)
     
