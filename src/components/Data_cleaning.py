@@ -35,11 +35,13 @@ def clean_csv():
         df2 = x
         df2['Time_taken (min)'] = y
         df = pd.DataFrame(df2)
-        df.to_csv("artifact/clean.csv",)
+        df.to_csv("artifact/clean.csv",index=False,header=True)
         
         logging.info('Data cleaning completed')
         
         return df
+
+    
     
     except Exception as e:
             logging.info('Exception at Data cleaning stage')

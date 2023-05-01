@@ -26,25 +26,24 @@ class DataTransformation:
             logging.info('Data Transformation started')
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['Weather_conditions', 'Road_traffic_density','Festival', 'City']
-            numerical_cols = ['Delivery_person_Age', 'Delivery_person_Ratings','Restaurant_latitude', 'Restaurant_longitude','Delivery_location_latitude', 'Delivery_location_longitude','Vehicle_condition', 'multiple_deliveries', 'Time_order_hour','Time_order_min', 'Time_order_picked_hour', 'Time_order_picked_min']
+            numerical_cols = ['Delivery_person_Age', 'Delivery_person_Ratings','Restaurant_latitude', 'Restaurant_longitude','Delivery_location_latitude', 'Delivery_location_longitude','Vehicle_condition', 'Time_order_hour','Time_order_min', 'Time_order_picked_hour', 'Time_order_picked_min']
             logging.info('pipeline initiated')
             ## Numerical Pipeline
             num_pipeline=Pipeline(
                 steps=[
-                ('imputer',SimpleImputer(strategy='median')),
-                ('scaler',StandardScaler())
-
-                ]
-
+                    ('imputer',SimpleImputer(strategy='median')),
+                    ("scaler",StandardScaler(with_mean=False))
+                    ]
             )
-            
+
             ## Categorical Pipeline
             ohe_transformer = OneHotEncoder()
-                
+    
             preprocessor=ColumnTransformer([
-            ('num_pipeline',num_pipeline,numerical_cols),
-            ('OneHotEncoder',ohe_transformer,categorical_cols)
+                ('num_pipeline',num_pipeline,numerical_cols),
+                ('OneHotEncoder',ohe_transformer,categorical_cols)
             ])
+           
         
             return preprocessor
             logging.info('pipeline completed')
@@ -77,6 +76,7 @@ class DataTransformation:
             ## Trnasformating using preprocessor obj
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
+            print(input_feature_train_arr)
 
             logging.info("Applying preprocessing object on training and testing datasets.")
             

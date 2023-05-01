@@ -19,24 +19,22 @@ def predict_datapoint():
         return render_template('form.html')
     
     else:
-        data=CustomData(
-            Delivery_person_Age=float(request.form.get('Delivery_person_Age')),
+        data=CustomData(Delivery_person_Age=float(request.form.get('Delivery_person_Age')),
             Delivery_person_Ratings = float(request.form.get('Delivery_person_Ratings')),
             Restaurant_latitude = float(request.form.get('Restaurant_latitude')),
             Restaurant_longitude = float(request.form.get('Restaurant_longitude')),
             Delivery_location_latitude = float(request.form.get('Delivery_location_latitude')),
             Delivery_location_longitude = float(request.form.get('Delivery_location_longitude')),
-            Weather_conditions = request.form.get('Weather_conditions'),
-            Road_traffic_density= request.form.get('Road_traffic_density'),
             Vehicle_condition = int(request.form.get('Vehicle_condition')),
-            multiple_deliveries= float(request.form.get('multiple_deliveries')),
-            Festival= request.form.get('Festival'),
-            City= request.form.get('City'),
+            multiple_deliveries = float(request.form.get('multiple_deliveries')),
             Time_order_hour= float(request.form.get('Time_order_hour')),
             Time_order_min= float(request.form.get('Time_order_min')),
             Time_order_picked_hour= float(request.form.get('Time_order_picked_hour')),
-            Time_order_picked_min= float(request.form.get('Time_order_picked_min'))
-            
+            Time_order_picked_min= float(request.form.get('Time_order_picked_min')),
+            Weather_conditions = request.form.get('Weather_conditions'),
+            #Road_traffic_density= request.form.get('Road_traffic_density'),
+            Festival= request.form.get('Festival'),
+            City= request.form.get('City')
             
         )
         final_new_data=data.get_data_as_dataframe()

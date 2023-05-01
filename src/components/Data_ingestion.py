@@ -26,9 +26,9 @@ class DataIngestion:
             df=pd.read_csv(os.path.join('Notebook/raw_data.csv'))
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False)
-            df=pd.read_csv(os.path.join('artifact/clean.csv'))
+            df1=pd.read_csv(os.path.join('artifact/clean.csv'))
             logging.info('Train Test Split')
-            train_set,test_set = train_test_split(df,test_size=0.30)
+            train_set,test_set = train_test_split(df1,test_size=0.30)
             train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True)
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
             
