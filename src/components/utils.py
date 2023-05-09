@@ -52,3 +52,21 @@ def load_object(file_path):
     except Exception as e:
         logging.info('Exception Occured in load_object function utils')
         raise CustomException(e,sys)
+
+def time_min(hr,min):
+    try:
+        Min = hr*60 + min
+        return Min
+    except Exception as e:
+        logging.info('Exception Occured in time_min function utils')
+        raise CustomException(e,sys)
+        
+
+def time_taken(picked_time,order_time):
+    try:
+        time = picked_time - order_time
+        return time
+    except Exception as e:
+        logging.info('Exception Occured in time_taken function utils')
+        raise CustomException(e,sys)
+    

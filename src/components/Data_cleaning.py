@@ -4,6 +4,7 @@ import os
 import sys
 from src.logger import logging
 from src.exception import CustomException
+#from src.components.utils import time_min,time_taken
 
 def clean_csv():
     logging.info("cleaning dataset")
@@ -20,7 +21,13 @@ def clean_csv():
         df["Time_order_min"] = df["Time_order_min"].astype(float)
         df["Time_order_picked_hour"] = df["Time_order_picked_hour"].astype(float)
         df["Time_order_picked_min"] = df["Time_order_picked_min"].astype(float)
+        #order_time = time_min(df['Time_order_hour'],df['Time_order_min'])
+        #picked_time = time_min(df['Time_order_picked_hour'],df['Time_order_picked_min'])
+
+
+        df["time_taken_by_deliver_person"] = time_taken(picked_time,order_time)
         df1 = df.copy()
+        
         numerical_columns=df.columns[df.dtypes!='object']
         categorical_columns=df.columns[df.dtypes=='object']
         df1 = df1[numerical_columns]

@@ -25,7 +25,7 @@ class DataTransformation:
         try:
             logging.info('Data Transformation started')
             # Define which columns should be ordinal-encoded and which should be scaled
-            categorical_cols = ['Weather_conditions', 'Road_traffic_density','Festival', 'City']
+            categorical_cols = ['Weather_conditions', 'Road_traffic_density','Type_of_vehicle','Festival', 'City']
             numerical_cols = ['Delivery_person_Age', 'Delivery_person_Ratings','Restaurant_latitude', 'Restaurant_longitude','Delivery_location_latitude', 'Delivery_location_longitude','Vehicle_condition', 'Time_order_hour','Time_order_min', 'Time_order_picked_hour', 'Time_order_picked_min']
             logging.info('pipeline initiated')
             ## Numerical Pipeline
