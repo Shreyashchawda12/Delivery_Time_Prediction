@@ -1,27 +1,30 @@
-# Basic Import
+import sys
+from dataclasses import dataclass
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
-from sklearn.svm import SVR
-from src.exception import CustomException
-from src.logger import logging
-
-from src.components.utils import save_object
-from src.components.utils import evaluate_model
-
-from dataclasses import dataclass
-import sys
 import os
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OrdinalEncoder,StandardScaler
+from src.exception import CustomException
+from src.logger import logging 
+from dataclasses import dataclass
+from src.components.data_transformation import DataTransformation
+from src.utils import save_object
+from src.utils import evaluate_model
+from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 
-@dataclass 
+@dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join('artifact','model.pkl')
-    
+    trained_model_file_path = os.path.join('artifacts','model.pkl')
+
+
 class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
-        
-    def initate_model_training(self,train_array,test_array):
+
+    def initaite_data_transformation(self,train_array,test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train, y_train, X_test, y_test = (
@@ -30,14 +33,14 @@ class ModelTrainer:
                 test_array[:,:-1],
                 test_array[:,-1]
             )
-            
+
             models={
             'LinearRegression':LinearRegression(),
             'Lasso':Lasso(),
             'Ridge':Ridge(),
-            'Elasticnet':ElasticNet(),
-            'svm':SVR(kernel = 'rbf')
+            'Elasticnet':ElasticNet()
         }
+            
             model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
             print(model_report)
             print('\n====================================================================================\n')
@@ -65,4 +68,3 @@ class ModelTrainer:
         except Exception as e:
             logging.info('Exception occured at Model Training')
             raise CustomException(e,sys)
-            

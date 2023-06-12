@@ -1,0 +1,27 @@
+[ 2023-06-12 14:02:45,185 ] 26 root - INFO - Data Ingestion methods Starts
+[ 2023-06-12 14:02:45,254 ] 29 root - INFO - Dataset read as pandas Dataframe
+[ 2023-06-12 14:02:45,551 ] 33 root - INFO - Train test split
+[ 2023-06-12 14:02:45,855 ] 39 root - INFO - Ingestion of Data is completed
+[ 2023-06-12 14:02:45,934 ] 65 root - INFO - Read train and test data completed
+[ 2023-06-12 14:02:45,940 ] 66 root - INFO - Train Dataframe Head : 
+   Delivery_person_Age  Delivery_person_Ratings  Restaurant_latitude  Restaurant_longitude  Delivery_location_latitude  Delivery_location_longitude Weather_conditions Road_traffic_density  Vehicle_condition  multiple_deliveries           City  Time_taken (min)
+0                 38.0                      4.7            22.312790             73.170283                   22.332790                    73.190283              Sunny                  Low                  2                  0.0          Urban                14
+1                 21.0                      4.9            26.902908             75.792934                   26.942908                    75.832934             Cloudy                 High                  0                  0.0  Metropolitian                28
+2                 29.0                      4.8            11.016298             76.972076                   11.026298                    76.982076              Sunny                  Low                  1                  0.0          Urban                16
+3                 22.0                      4.8            26.910262             75.783013                   26.920262                    75.793013                Fog                 High                  2                  0.0  Metropolitian                30
+4                 20.0                      4.7            12.933284             77.615428                   12.993284                    77.675428             Stormy               Medium                  0                  0.0  Metropolitian                17
+[ 2023-06-12 14:02:45,953 ] 67 root - INFO - Test Dataframe Head  : 
+   Delivery_person_Age  Delivery_person_Ratings  Restaurant_latitude  Restaurant_longitude  Delivery_location_latitude  Delivery_location_longitude Weather_conditions Road_traffic_density  Vehicle_condition  multiple_deliveries           City  Time_taken (min)
+0                 31.0                      4.7            12.323225             76.630028                   12.373225                    76.680028             Stormy               Medium                  0                  0.0  Metropolitian                26
+1                 37.0                      4.8            21.171060             72.789292                   21.221060                    72.839292              Sunny                  Jam                  0                  0.0  Metropolitian                22
+2                 38.0                      4.9            13.027018             80.254791                   13.157018                    80.384791              Windy                  Jam                  0                  1.0  Metropolitian                37
+3                 21.0                      4.5            17.410371             78.437225                   17.520371                    78.547225              Windy                  Jam                  2                  1.0  Metropolitian                19
+4                 24.0                      4.2            17.451976             78.385883                   17.471976                    78.405883         Sandstorms                  Low                  0                  1.0          Urban                24
+[ 2023-06-12 14:02:45,953 ] 69 root - INFO - Obtaining preprocessing object
+[ 2023-06-12 14:02:45,953 ] 27 root - INFO - Data Transformation initiated
+[ 2023-06-12 14:02:45,953 ] 35 root - INFO - Pipeline Initiated
+[ 2023-06-12 14:02:46,024 ] 86 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2023-06-12 14:02:46,027 ] 98 root - INFO - Preprocessor pickle file saved
+[ 2023-06-12 14:02:46,029 ] 29 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2023-06-12 14:02:46,154 ] 47 root - INFO - Model Report : {'LinearRegression': 0.5536798619414882, 'Lasso': 0.31950659262903236, 'Ridge': 0.5163890432838357, 'Elasticnet': 0.2900446152364692}
+[ 2023-06-12 14:02:46,155 ] 60 root - INFO - Best Model Found , Model Name : LinearRegression , R2 Score : 0.5536798619414882

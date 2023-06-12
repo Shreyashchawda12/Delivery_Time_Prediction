@@ -1,0 +1,14 @@
+[ 2023-06-12 14:17:03,139 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-06-12 14:17:05,065 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-06-12 14:17:05,067 ] 224 werkzeug - INFO -  * Debugger PIN: 104-881-403
+[ 2023-06-12 14:17:22,361 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:17:22,552 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:17:22] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:17:26,633 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:17:26] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:17:40,607 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:17:40,619 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:17:40] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:20:38,149 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:20:38,149 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:20:38,151 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:20:38,151 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:20:38,156 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:20:38,156 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading

@@ -6,12 +6,13 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder,StandardScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import OneHotEncoder 
 
 from src.exception import CustomException
 from src.logger import logging
 import os
-from src.components.utils import save_object
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -20,35 +21,34 @@ class DataTransformationConfig:
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
-    
+
     def get_data_transformation_object(self):
         try:
             logging.info('Data Transformation initiated')
-            # Define which columns should be one hot-encoded and which should be scaled
-            categorical_cols = ['Weather_conditions', 'Road_traffic_density', 'Type_of_vehicle', 'Festival', 'City']
-            numerical_cols = ['Delivery_person_Age', 'Delivery_person_Ratings', 'Restaurant_latitude', 'Restaurant_longitude', 
-                              'Delivery_location_latitude','Delivery_location_longitude', 'Vehicle_condition', 'multiple_deliveries', 
-                              'Time_order_hour', 'Time_order_min', 'Time_order_picked_hour', 'Time_order_picked_min']
+            # Define which columns should be ordinal-encoded and which should be scaled
+            categorical_cols = ['Weather_conditions', 'Road_traffic_density','City']
+            numerical_cols = ['Delivery_person_Age','Delivery_person_Ratings','Restaurant_latitude','Restaurant_longitude','Delivery_location_latitude',
+                              'Delivery_location_longitude','Vehicle_condition']
+
+        
+            
             logging.info('Pipeline Initiated')
+
             
             ## Numerical Pipeline
             num_pipeline=Pipeline(
                 steps=[
-                    ('imputer',SimpleImputer(strategy='median'),
-                    ('scaler',StandardScaler(with_mean=False)))
+                    ('imputer',SimpleImputer(strategy='median')),
+                    ('scaler',StandardScaler())
                     ]
                 )
-
-
-    
+            
             preprocessor=ColumnTransformer([
                 ('num_pipeline',num_pipeline,numerical_cols),
                 ('OneHotEncoder',OneHotEncoder(),categorical_cols)
                 ])
             
             return preprocessor
-            
-           
 
             logging.info('Pipeline Completed')
 
@@ -69,8 +69,9 @@ class DataTransformation:
             logging.info('Obtaining preprocessing object')
 
             preprocessing_obj = self.get_data_transformation_object()
-            target_column_name = 'Time_order_picked_min'
-            drop_columns = [target_column_name,'id']
+
+            target_column_name = 'Time_taken (min)'
+            drop_columns = [target_column_name,'Time_taken (min)']
 
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]
@@ -106,5 +107,3 @@ class DataTransformation:
             logging.info("Exception occured in the initiate_datatransformation")
 
             raise CustomException(e,sys)
-
-            

@@ -1,0 +1,28 @@
+[ 2023-06-12 14:05:16,637 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-06-12 14:05:18,661 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-06-12 14:05:18,663 ] 224 werkzeug - INFO -  * Debugger PIN: 104-881-403
+[ 2023-06-12 14:05:20,348 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:05:20] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:05:39,731 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:05:39,917 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:05:39] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:05:43,742 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:05:43] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:06:38,983 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:06:38,998 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:06:38] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:06:42,381 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:06:42] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:08:44,960 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:08:44,975 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:08:44] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:08:48,861 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:08:48] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:09:15,488 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:09:15,502 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:09:15] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:09:19,854 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:09:19] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:11:05,013 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:11:05] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:11:13,117 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:11:13] "GET / HTTP/1.1" 200 -
+[ 2023-06-12 14:11:18,575 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:11:18] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:11:36,112 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:11:36,127 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:11:36] "POST /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:11:40,925 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:11:40] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:16:44,121 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:16:44,122 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:16:44,133 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:16:44,134 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:16:44,135 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:16:44,136 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading

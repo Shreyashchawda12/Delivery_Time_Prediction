@@ -1,0 +1,12 @@
+prefix=e:/Delivery_time_prediction/delivery_time/Library
+exec_prefix=e:/Delivery_time_prediction/delivery_time/Library
+libdir=e:/Delivery_time_prediction/delivery_time/Library/lib
+includedir=e:/Delivery_time_prediction/delivery_time/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.4
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++ 
+Requires.private: 
+Cflags: -I${includedir} 

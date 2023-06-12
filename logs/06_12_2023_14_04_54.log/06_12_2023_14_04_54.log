@@ -1,0 +1,7 @@
+[ 2023-06-12 14:04:54,533 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-06-12 14:04:56,632 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-06-12 14:04:56,635 ] 224 werkzeug - INFO -  * Debugger PIN: 104-881-403
+[ 2023-06-12 14:04:56,677 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:04:56] "GET /predict HTTP/1.1" 200 -
+[ 2023-06-12 14:05:14,467 ] 70 root - INFO - Dataframe Gathered
+[ 2023-06-12 14:05:14,686 ] 224 werkzeug - INFO -  * Detected change in 'C:\\ProgramData\\anaconda3\\Lib\\site-packages\\sklearn\\base.py', reloading
+[ 2023-06-12 14:05:14,713 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:05:14] "POST /predict HTTP/1.1" 200 -

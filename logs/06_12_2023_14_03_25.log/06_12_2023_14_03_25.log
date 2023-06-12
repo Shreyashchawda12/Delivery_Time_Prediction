@@ -1,0 +1,18 @@
+[ 2023-06-12 14:03:26,236 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-06-12 14:03:28,502 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-06-12 14:03:28,505 ] 224 werkzeug - INFO -  * Debugger PIN: 104-881-403
+[ 2023-06-12 14:03:34,481 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:03:34] "GET / HTTP/1.1" 200 -
+[ 2023-06-12 14:04:08,929 ] 224 werkzeug - INFO - 127.0.0.1 - - [12/Jun/2023 14:04:08] "[33mGET /predict HTTP/1.1[0m" 404 -
+[ 2023-06-12 14:04:52,239 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,239 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,247 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,247 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,249 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,249 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,520 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,520 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,521 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,522 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,522 ] 224 werkzeug - INFO -  * Detected change in 'e:\\delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,522 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
+[ 2023-06-12 14:04:52,523 ] 224 werkzeug - INFO -  * Detected change in 'E:\\Delivery_time_prediction\\application.py', reloading
